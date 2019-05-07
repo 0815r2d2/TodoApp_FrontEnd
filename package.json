@@ -1,5 +1,5 @@
 {
-  "name": "todo-application-frontend",
+  "name": "todo-app-frontend",
   "description": "An Aurelia client application.",
   "version": "0.1.0",
   "repository": {
@@ -45,58 +45,13 @@
     "html-loader": "^0.5.5",
     "istanbul-instrumenter-loader": "^3.0.1",
     "opn": "^5.4.0",
-    "webpack-bundle-analyzer": "^3.0.4",
-    "jest": "^24.1.0",
-    "jest-cli": "^24.1.0",
-    "jest-transform-stub": "^2.0.0",
-    "aurelia-loader-nodejs": "^1.0.1",
-    "aurelia-pal-nodejs": "^1.2.0",
-    "ts-jest": "^24.0.0",
-    "@types/jest": "^24.0.9"
+    "webpack-bundle-analyzer": "^3.0.4"
   },
   "scripts": {
     "build": "au build",
-    "start": "au run",
-    "test": "au test"
+    "start": "au run"
   },
   "engines": {
     "node": ">=8.9.0"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^aurelia-binding$": "<rootDir>/node_modules/aurelia-binding"
-    },
-    "modulePaths": [
-      "<rootDir>/src",
-      "<rootDir>/node_modules"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
-    "transform": {
-      "^.+\\.(css|less|sass|scss|styl|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "jest-transform-stub",
-      "^.+\\.ts$": "ts-jest"
-    },
-    "testRegex": "\\.spec\\.(ts|js)$",
-    "setupFiles": [
-      "<rootDir>/test/jest-pretest.ts"
-    ],
-    "testEnvironment": "node",
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,ts}",
-      "!**/*.spec.{js,ts}",
-      "!**/node_modules/**",
-      "!**/test/**"
-    ],
-    "coverageDirectory": "<rootDir>/test/coverage-jest",
-    "coverageReporters": [
-      "json",
-      "lcov",
-      "text",
-      "html"
-    ]
   }
 }

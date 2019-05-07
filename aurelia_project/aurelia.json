@@ -1,5 +1,5 @@
 {
-  "name": "todo-application-frontend",
+  "name": "todo-app-frontend",
   "type": "project:application",
   "paths": {
     "root": "src",

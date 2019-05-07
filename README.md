@@ -1,4 +1,4 @@
-# `todo-application-frontend`
+# `todo-app-frontend`
 
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
 
@@ -19,9 +19,3 @@ To enable hot module reload, do `au run --hmr`.
 ## Build for production
 
 Run `au build --env prod`.
-
-## Unit tests
-
-Run `au test` (or `au jest`).
-
-To run in watch mode, `au test --watch` or `au jest --watch`.

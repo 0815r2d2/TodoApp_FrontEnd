@@ -6,6 +6,9 @@ import {PLATFORM} from 'aurelia-pal';
 export function configure(aurelia: Aurelia) {
   aurelia.use
     .standardConfiguration()
+    // .basicConfiguration()
+    .router()
+    .history()
     .feature(PLATFORM.moduleName('resources/index'));
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
