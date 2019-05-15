@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": { "*": ["types/*"] },
     "module": "esnext",
     "skipLibCheck": true,
     "removeComments": true,

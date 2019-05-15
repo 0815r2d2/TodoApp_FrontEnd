@@ -1,5 +1,7 @@
 <template>
-  <h1>Auswahl</h1>
-  <a route-href="route: registeruser">go to contacts</a>
-  <router-view></router-view>
+  <require from="./resources/nav-menu/nav-menu.html"></require>
+  <nav-menu router.bind="router"></nav-menu>
+  <div class="page-host">
+    <router-view></router-view>
+  </div>
 </template>

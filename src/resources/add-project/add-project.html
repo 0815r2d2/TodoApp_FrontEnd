@@ -1,0 +1,12 @@
+<template>
+  <div class="container">
+    <h1>Add Project</h1>
+    <form role="form" submit.delegate="saveProject()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" value.bind="name" class="form-control" id="name" placeholder="Name">
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</template>

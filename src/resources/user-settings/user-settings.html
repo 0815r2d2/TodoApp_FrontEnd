@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h1>Register User</h1>
-    <form role="form" submit.delegate="register()">
+    <h1>User Settings</h1>
+    <form role="form" submit.delegate="saveUserData()">
       <div class="form-group">
         <label for="firstname">Firstname</label>
         <input type="text" value.bind="firstname" class="form-control" id="firstname" placeholder="Firstname">
@@ -18,18 +18,10 @@
         <label for="password">Password</label>
         <input type="password" value.bind="password" class="form-control" id="password" placeholder="Password">
       </div>
-
-      <div class="form-group">
-        <label repeat.for="role of roles">
-          <input type="radio" name="group2" model.bind="role" checked.bind="selectedRole">
-          ${role.name}
-        </label>
-      </div>
-
       <div class="form-group">
         <label> ${error} </label>
       </div>
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
     </form>
   </div>
 </template>
