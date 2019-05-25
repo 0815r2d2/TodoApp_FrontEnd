@@ -14,8 +14,8 @@ export class App {
     this.authenticationService = new AuthenticationService();
   }
 
-  authTitle = ["User Settings", "User Todos", "Add Todo", "Todo", "Projects", "Add Project", "Logout"];
-  nonAuthTitle = ["Register User", "Login User"];
+  authTitle = ["Home", "User Settings", "User Todos", "Add Todo", "Todo", "Projects", "Add Project", "Logout"];
+  nonAuthTitle = ["Home", "Register User", "Login User"];
 
   configureRouter(config: RouterConfiguration, router: Router): void {
     config.title = 'Title';
@@ -39,6 +39,7 @@ export class App {
         this.router.navigation.splice(index, 1);
       }
       //add auth Routes
+      this.router.addRoute({ route: ['', 'home'], name: 'home', nav: true, moduleId: PLATFORM.moduleName('./resources/home/home'), title: 'Home', settings: { data: this } });
       this.router.addRoute({ route: 'usertodos', name: 'usertodos', nav: true, moduleId: PLATFORM.moduleName('./resources/show-todos-user/show-todos-user'), title: 'User Todos', settings: { data: this } });
       this.router.addRoute({ route: 'todosdetail/:id', name: 'tododetail', nav: false, moduleId: PLATFORM.moduleName('./resources/show-todos-details/show-todos-details'), title: 'Todo', settings: { data: this } });
       this.router.addRoute({ route: 'addtodo', name: 'addtodo', nav: true, moduleId: PLATFORM.moduleName('./resources/add-todo/add-todo'), title: 'Add Todo', settings: { data: this } });
@@ -54,6 +55,7 @@ export class App {
         this.router.navigation.splice(index, 1);
       }
       //add non auth Routes
+      this.router.addRoute({ route: ['', 'home'], name: 'home', nav: true, moduleId: PLATFORM.moduleName('./resources/home/home'), title: 'Home', settings: { data: this } });
       this.router.addRoute({ route: 'registeruser', name: 'registeruser', nav: true, moduleId: PLATFORM.moduleName('./resources/register-user/register-user'), title: 'Register User', settings: { data: this } });
       this.router.addRoute({ route: 'loginuser', name: 'loginuser', nav: true, moduleId: PLATFORM.moduleName('./resources/login-user/login-user'), title: 'Login User', settings: { data: this } });
     }
